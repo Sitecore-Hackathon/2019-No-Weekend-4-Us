@@ -1,0 +1,78 @@
+﻿---
+ID: "440c6a44-a4bc-490a-9d96-04fcd9d27f41"
+Parent: "7d100f1f-0691-47e0-babc-a2d8497ddf60"
+Template: "abc069d5-3627-4a20-841e-d199b0eb4957"
+Path: /sitecore/content/Applications/WebEdit/Ribbons/WebEdit/View/Editing/Show Peanuts Bar
+DB: core
+SharedFields:
+- ID: "cc65212f-c5f2-437a-965e-7f0690a82f21"
+  Hint: ID
+  Value: ShowPeanuts
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          id="{BDE651C9-7988-4950-8E01-EA80106563A2}"
+          par="Tooltip&amp;IsVisible=1&amp;Click=trigger%3Abutton%3Acheck&amp;Command=ShowPeanuts&amp;ControlStateRequest&amp;PostponedCall=1&amp;HideInWebEditMode&amp;HideInPreviewMode&amp;HideInDebugMode&amp;HideInCmsOnlyMode&amp;AccessKey&amp;ConfigurationItem&amp;IsEnabled&amp;Id&amp;Behaviors&amp;PageCodeScriptFileName=%2Fsitecore%20modules%2FPeanuts%2Fpeanuts.js&amp;RegistryKey=%2FCurrent_User%2FPage%20Editor%2FShow%2FPeanuts&amp;QueryKey"
+          uid="{6B8872F3-1387-4A2D-89D5-EBD07A8736B9}" />
+      </d>
+    </r>
+- ID: "fa8ffab1-6269-480d-b746-f6bed5a178a2"
+  Hint: Click
+  Value: 
+Languages:
+- Language: da
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Vis fortrolighedsadvarsel
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20190302T050911Z
+    - ID: "455d570d-77b9-4aa6-b84e-d7dcab7079c0"
+      Hint: Tooltip
+      Value: Vis eller skjul fortrolighedsadvarsel
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "c7a8b822-2b9d-4e1d-9e5f-82326fcbbfc1"
+      Hint: Header
+      Value: Fortrolighedsadvarsel
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: 
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{6B8872F3-1387-4A2D-89D5-EBD07A8736B9}"
+              s:par="Click=trigger%3abutton%3acheck&amp;Command=TogglePrivacyWarning&amp;RegistryKey=%2fCurrent_User%2fPage+Editor%2fShow%2fcookie-warning&amp;PageCodeScriptFileName=%2fsitecore%2fshell%2fclient%2fSitecore%2fExperienceAccelerator%2fExperienceEditor%2fCommands%2fTogglePrivacyWarning.js&amp;PostponedCall=0" />
+          </d>
+        </r>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20070313T124500Z
+    - ID: "455d570d-77b9-4aa6-b84e-d7dcab7079c0"
+      Hint: Tooltip
+      Value: Show or hide peanuts
+    - ID: "c7a8b822-2b9d-4e1d-9e5f-82326fcbbfc1"
+      Hint: Header
+      Value: Peanuts

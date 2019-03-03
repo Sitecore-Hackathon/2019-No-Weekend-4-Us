@@ -1,0 +1,24 @@
+{
+    "name": "assets",
+    "version": "1.0.0",
+    "description": "peanuts_scripts",
+    "main": ".js/index.js",
+    "scripts": {
+        "dev": "parcel ./js/index.js -d build/output && parcel ./sass/index.scss -d build/output",
+        "build": "parcel build ./js/index.js -d build/output && parcel build ./sass/index.scss -d build/output"
+    },
+    "author": "THE REFERENCE",
+    "license": "ISC",
+    "devDependencies": {
+        "babel-core": "^6.26.3",
+        "babel-loader": "^8.0.5",
+        "babel-polyfill": "^6.26.0",
+        "babel-preset-es2015": "^6.24.1",
+        "babel-preset-stage-0": "^6.24.1",
+        "cssnano": "^4.1.10",
+        "sass": "^1.17.2"
+    },
+    "dependencies": {
+        "whatwg-fetch": "^3.0.0"
+    }
+}

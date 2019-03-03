@@ -1,50 +1,40 @@
 # Documentation
 
-TEST
-
-The documentation for this years Hackathon must be provided as a readme in Markdown format as part of your submission. 
-
-You can find a very good reference to Github flavoured markdown reference in [this cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet). If you want something a bit more WYSIWYG for editing then could use [StackEdit](https://stackedit.io/app) which provides a more user friendly interface for generating the Markdown code. Those of you who are [VS Code fans](https://code.visualstudio.com/docs/languages/markdown#_markdown-preview) can edit/preview directly in that interface too.
-
-Examples of things to include are the following.
+# "Peanuts"
 
 ## Summary
 
-**Category:** Hackathon Category
+**Category:** Best extension of the editing experience for SXA in Experience Editor
 
-What is the purpose of your module? What problem does it solve and how does it do that?
+We took this category very literaly and have extended on the Experience Editor by adding new functionalities within a 'toggleable' additional toolbox. Our toolbox (lovingfully named "Peanuts", since it's meant to make the editing... well, you guessed). The additional toolbar helps to bring information regarding the SXA page structure closer to the content editor. The module focusses on displaying the component and rendering structure, providing human readable data source information, navigating towards the actual components as well as displaying information on the personalisation set up per component. On top of this, we show the number of renderings (to give an indication when the amount of components is too high) as well as information about the use and amount of local datasources.
 
 ## Pre-requisites
 
-Does your module rely on other Sitecore modules or frameworks?
-
-- List any dependencies
-- Or other modules that must be installed
-- Or services that must be enabled/configured
+Next to the overall prerequisites (Sitecore 9.1) you will also need SXA 1.8
+We installed Habitat on top of that to have data to work with. Our solution does not provide a site nor test data, so it should be installed on an instance with data to test. Habitat sounds like a good solution in that case.
 
 ## Installation
 
-Provide detailed instructions on how to install the module, and include screenshots where necessary.
+The module is installed with a Sitecore package. 
 
-1. Use the Sitecore Installation wizard to install the [package](#link-to-package)
-2. ???
-3. Profit
+This will install one item in the core database for our checkbox in the ribbon. It will also add files in a folder in "sitecore modules", a dll in the bin folder and a few config files.
+
+The install file is in the sc-package folder: [peanuts-2019.1.zip](../sc.package/peanuts-2019.1.zip)
+
 
 ## Configuration
 
-How do you configure your module once it is installed? Are there items that need to be updated with settings, or maybe config files need to have keys updated?
+The module does not require a lot of configuration - it will work as soon as it is installed. We do have one configuration file (Feature.Peanuts.Settings.config) that add a setting to Sitecore that lists ID's of renderings that should be included in the overview (they are still included in the count however). This feature can be used to hide purely structural renderings from the list but is optional. The module is for editing only so the configuration is only needed on ContentManagement or Standalone instances.
 
-Remember you are using Markdown, you can provide code samples too:
+By default we added the ID of the Container rendering.
+
 
 ```xml
-<?xml version="1.0"?>
-<!--
-  Purpose: Configuration settings for my hackathon module
--->
 <configuration xmlns:patch="http://www.sitecore.net/xmlconfig/">
-  <sitecore>
+  <sitecore role:require="Standalone or ContentManagement">
     <settings>
-      <setting name="MyModule.Setting" value="Hackathon" />
+      <!-- serperate renderings by | -->
+      <setting name="Peanuts.ExcludedRenderings" value="896A2C68-1362-4E88-8BA0-1805AE6D4837"/>
     </settings>
   </sitecore>
 </configuration>
@@ -52,19 +42,47 @@ Remember you are using Markdown, you can provide code samples too:
 
 ## Usage
 
-Provide documentation  about your module, how do the users use your module, where are things located, what do icons mean, are there any secret shortcuts etc.
+The module is initially disabled. To enable the module, open the View ribbon and toggle the 'Peanuts' checkbox inside the Editing chunk. On activation of the module, a second Toolbar block appears in red, featuring a 'P' icon.
+When this block is clicked, the toolbox opens up to display the information of the contained components
 
-Please include screenshots where necessary. You can add images to the `./images` folder and then link to them from your documentation:
+![Peanuts checkbox](images/Checkbox.png?raw=true "Peanuts checkbox")
 
-![Hackathon Logo](images/hackathon.png?raw=true "Hackathon Logo")
+![Closed Peanuts toolbox](images/ClosedToolbox.png?raw=true "Closed Peanuts toolbox")
 
-You can embed images of different formats too:
+The toolbox ships with the following functionalities:
+- Provide an overview of all contained components on the page and basic variant information
 
-![Deal With It](images/deal-with-it.gif?raw=true "Deal With It")
+![Open Peanuts toolbox](images/OpenedToolbox.png?raw=true "Open Peanuts toolbox")
 
-And you can embed external images too:
+- Provide details on specific component, consisting of the
+  - Component name
+  - Datasource readable name
+  - Variant readable name
+  - Personalization rules
 
-![Random](https://placeimg.com/480/240/any "Random")
+  ![Component details](images/ComponentDetails.png?raw=true "Component details")
+
+- When selecting a component, the page navigates to that specific component. 
+The component gets selected as if it was clicked within the editor.
+
+![Component selection](images/ComponentSelection.png?raw=true "Component selection")
+
+- On the details of a specific component, the personalization details can also be viewed - we display the different personalization rules available for that component.
+
+![View personalization](images/ViewPersonalization.png?raw=true "View personalization")
+
+To provide the much needed information for the front-end javascript built on and around the SXA toolbox, we worked based on our own HttpHandler "PeanutsFeed.ashx". We realize (and learned in more detail) that the hidden scLayout field is available in the Experience Editor. However, sending this back entirely would require too many unstructured item lookups and would not feel logical in its buildup. This is why we let the front-end code perform the actual call based on the current querystring. This allows us to retrieve the device, language, version as well as the database and the item ID.
+
+Based on this information we are able to retrieve the actual information we require to build up the toolbox. This also means that no unnecessary information is pulled from Sitecore.
+
+Future functionalities and things we would have liked to have added but were not realized within the Hackathon timeframe.
+- Possibility to switch between the different personalization rules available for a component by clicking on the selected variation
+- Change position of the components by drag and dropping them inside the toolbar
+- Full support for snippets
+- Delete component or personalization rule
+- Extend to also include Partial Renderings
+- Publish only a specific component - taking cache clearing into account
+- Toggle components correctly
 
 ## Video
 

@@ -1,0 +1,148 @@
+{
+    "overview": [
+        {
+            "count": 9,
+            "localRenderings": 5,
+            "localItems": 9
+        }
+    ],
+    "details": [
+        {
+            "name": "Snippet",
+            "uniqueId": "{C3B8C2EE-F9DC-44C4-8837-93681B962081}",
+            "dataSourceId": "{874ED455-AF6F-438D-BEA8-1916B7FAB5BD}",
+            "dataSourceName": "A Wide Array of Guide Interests",
+            "icon": "/temp/iconcache/office/16x16/elements3.png",
+            "placeholder": "/main/sxa-content-container/container-1/container-11",
+            "rules": null
+        },
+        {
+            "name": "Promo",
+            "uniqueId": "{1C0F3249-32A1-475D-8E69-8B2111ED267D}",
+            "dataSourceId": "local:/Data/CTA - The Perfect Home Theater",
+            "dataSourceName": "CTA - The Perfect Home Theater",
+            "icon": "/temp/iconcache/office/16x16/window_dialog.png",
+            "placeholder": "/main/sxa-content-container/container-1/container-10",
+            "rules": [
+                {
+                    "name": "Smart Headline",
+                    "uniqueId": "f70150c0-5e7a-4665-ae38-c6c05376bfe4"
+                },
+                {
+                    "name": "Default",
+                    "uniqueId": "00000000-0000-0000-0000-000000000000"
+                }
+            ]
+        },
+        {
+            "name": "Promo",
+            "uniqueId": "{E1FA64CF-6A5A-4364-9830-C32D63D64B58}",
+            "dataSourceId": "local:/Data/CTA - Design Your Connected Home",
+            "dataSourceName": "CTA - Design Your Connected Home",
+            "icon": "/temp/iconcache/office/16x16/window_dialog.png",
+            "placeholder": "/main/sxa-content-container/container-1/container-9",
+            "rules": null
+        },
+        {
+            "name": "Carousel",
+            "uniqueId": "{F0D732F5-0FE5-42A7-8006-4DFEBF378BB1}",
+            "dataSourceId": "local:/Data/Carousels/Smart and Connected Carousel",
+            "dataSourceName": "Smart and Connected Carousel",
+            "icon": "/temp/iconcache/office/16x16/back.png",
+            "placeholder": "/main/sxa-content-container/container-1",
+            "rules": [
+                {
+                    "name": "Foodie",
+                    "uniqueId": "4ddfe347-2754-466c-8e79-8c5bdb6bc543"
+                },
+                {
+                    "name": "Fitness",
+                    "uniqueId": "a9f449d9-aebb-46a0-a08e-e9a534c78eff"
+                },
+                {
+                    "name": "Gaming",
+                    "uniqueId": "bfd25921-fc3b-416f-abe3-3de4fce624cc"
+                },
+                {
+                    "name": "Home Theater",
+                    "uniqueId": "8bf8ac5f-25c7-4ce2-a83b-d4376fb56f33"
+                },
+                {
+                    "name": "Default",
+                    "uniqueId": "00000000-0000-0000-0000-000000000000"
+                }
+            ]
+        },
+        {
+            "name": "Promo",
+            "uniqueId": "{91549E4E-85B9-46BB-B903-99BFBF5FEA4C}",
+            "dataSourceId": "local:/Data/Promo - Content Finder",
+            "dataSourceName": "Promo - Content Finder",
+            "icon": "/temp/iconcache/office/16x16/window_dialog.png",
+            "placeholder": "/main/sxa-content-container/container-1",
+            "rules": [
+                {
+                    "name": "Content Finder Complete",
+                    "uniqueId": "75829464-687d-4799-ac69-832d3328fbb6"
+                },
+                {
+                    "name": "Fitness",
+                    "uniqueId": "807c38a7-ed29-40b8-ad6e-90e8f0105531"
+                },
+                {
+                    "name": "Default",
+                    "uniqueId": "00000000-0000-0000-0000-000000000000"
+                }
+            ]
+        },
+        {
+            "name": "Container",
+            "uniqueId": "{88B380C7-B863-4D92-BAE9-DF326B9E7685}",
+            "dataSourceId": "",
+            "dataSourceName": null,
+            "icon": "/temp/iconcache/office/16x16/box_open.png",
+            "placeholder": "/main/sxa-content-container/container-1",
+            "rules": null
+        },
+        {
+            "name": "Promo",
+            "uniqueId": "{6B1C256F-3488-4908-BB96-B7746E471A36}",
+            "dataSourceId": "local:/Data/Promo - Sight and Sound",
+            "dataSourceName": "Promo - Gaming",
+            "icon": "/temp/iconcache/office/16x16/window_dialog.png",
+            "placeholder": "/main/sxa-content-container/container-1",
+            "rules": [
+                {
+                    "name": "Home Theater Consultation",
+                    "uniqueId": "6f0818b1-ad63-413e-8926-b308503d5df7"
+                },
+                {
+                    "name": "Show Smart Home",
+                    "uniqueId": "0a13f1a6-2a45-4d6b-a843-3ab210194f4d"
+                },
+                {
+                    "name": "Default",
+                    "uniqueId": "00000000-0000-0000-0000-000000000000"
+                }
+            ]
+        },
+        {
+            "name": "Container",
+            "uniqueId": "{C03747C0-B0DC-467F-AA8D-126A4FFFABE9}",
+            "dataSourceId": "",
+            "dataSourceName": null,
+            "icon": "/temp/iconcache/office/16x16/box_open.png",
+            "placeholder": "/main/sxa-content-container/container-1",
+            "rules": null
+        },
+        {
+            "name": "Container",
+            "uniqueId": "{81BDD83F-35B1-49D1-9B7C-8C0BE1189F83}",
+            "dataSourceId": "",
+            "dataSourceName": null,
+            "icon": "/temp/iconcache/office/16x16/box_open.png",
+            "placeholder": "/main/sxa-content-container/container-1",
+            "rules": null
+        }
+    ]
+};

@@ -1,0 +1,24 @@
+<Dictionary>
+  <Words>
+    <DiscreteExceptions>
+      <Term>Login</Term>
+      <Term>Logout</Term>
+      <Term>SignOn</Term>
+      <Term>MetaData</Term>
+    </DiscreteExceptions>
+    <Recognized>
+      <Word>Api</Word>
+      <Word>Div</Word>
+      <Word>Mvc</Word>
+      <Word>Sc</Word>
+      <Word>Sitecore</Word>
+    </Recognized>
+  </Words>
+  <Acronyms>
+    <CasingExceptions>
+      <Acronym>ID</Acronym>
+      <Acronym>Nr</Acronym>
+      <Acronym>SHA</Acronym>
+    </CasingExceptions>
+  </Acronyms>
+</Dictionary>
