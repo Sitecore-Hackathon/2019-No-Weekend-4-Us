@@ -32,9 +32,18 @@ namespace Feature.Peanuts
         {
             var data = HttpUtility.UrlDecode(HttpContext.Current.Request.Form["querystring"]);
             var query = WebUtil.ParseQueryString(data, true);
-            int.TryParse(query["sc_version"], out int version);
             database = Factory.GetDatabase(query["database"]);
-            item = database.GetItem(new ID(query["sc_itemId"]), LanguageManager.GetLanguage(query["sc_lang"])).Versions.GetVersions()[version - 1];
+
+            if (int.TryParse(query["sc_version"], out int version))
+            {
+                version = Math.Max(version, 0);
+                item = database.GetItem(new ID(query["sc_itemId"]), LanguageManager.GetLanguage(query["sc_lang"])).Versions.GetVersions()[version];
+            }
+            else
+            {
+                item = database.GetItem(new ID(query["sc_itemId"]), LanguageManager.GetLanguage(query["sc_lang"]));
+            }
+            
             return query;
         }
 
