@@ -45,14 +45,14 @@ By default we added the ID of the Container rendering.
 The module is initially disabled. To enable the module, open the View ribbon and toggle the 'Peanuts' checkbox inside the Editing chunk. On activation of the module, a second Toolbar block appears in red, featuring a 'P' icon.
 When this block is clicked, the toolbox opens up to display the information of the contained components
 
-![Peanuts checkbox](images/Checkbox.png?raw=true "Peanuts checkbox")
+![Peanuts checkbox](images/Checkbox.PNG?raw=true "Peanuts checkbox")
 
-![Closed Peanuts toolbox](images/ClosedToolbox.png?raw=true "Closed Peanuts toolbox")
+![Closed Peanuts toolbox](images/ClosedToolbox.PNG?raw=true "Closed Peanuts toolbox")
 
 The toolbox ships with the following functionalities:
 - Provide an overview of all contained components on the page and basic variant information
 
-![Open Peanuts toolbox](images/OpenedToolbox.png?raw=true "Open Peanuts toolbox")
+![Open Peanuts toolbox](images/OpenedToolbox.PNG?raw=true "Open Peanuts toolbox")
 
 - Provide details on specific component, consisting of the
   - Component name
@@ -60,16 +60,16 @@ The toolbox ships with the following functionalities:
   - Variant readable name
   - Personalization rules
 
-  ![Component details](images/ComponentDetails.png?raw=true "Component details")
+  ![Component details](images/ComponentDetails.PNG?raw=true "Component details")
 
 - When selecting a component, the page navigates to that specific component. 
 The component gets selected as if it was clicked within the editor.
 
-![Component selection](images/ComponentSelection.png?raw=true "Component selection")
+![Component selection](images/ComponentSelection.PNG?raw=true "Component selection")
 
 - On the details of a specific component, the personalization details can also be viewed - we display the different personalization rules available for that component.
 
-![View personalization](images/ViewPersonalization.png?raw=true "View personalization")
+![View personalization](images/ViewPersonalization.PNG?raw=true "View personalization")
 
 To provide the much needed information for the front-end javascript built on and around the SXA toolbox, we worked based on our own HttpHandler "PeanutsFeed.ashx". We realize (and learned in more detail) that the hidden scLayout field is available in the Experience Editor. However, sending this back entirely would require too many unstructured item lookups and would not feel logical in its buildup. This is why we let the front-end code perform the actual call based on the current querystring. This allows us to retrieve the device, language, version as well as the database and the item ID.
 
